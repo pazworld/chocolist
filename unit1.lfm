@@ -3,7 +3,7 @@ object Form1: TForm1
   Height = 353
   Top = 121
   Width = 632
-  Caption = 'Form1'
+  Caption = 'chocolist'
   ClientHeight = 353
   ClientWidth = 632
   LCLVersion = '2.0.6.0'
@@ -13,14 +13,14 @@ object Form1: TForm1
     Top = 8
     Width = 184
     TabOrder = 0
-    Text = 'Edit1'
+    Text = 'pascal'
   end
   object Button1: TButton
     Left = 192
     Height = 25
     Top = 8
     Width = 75
-    Caption = 'Button1'
+    Caption = 'Search'
     TabOrder = 1
   end
   object ListBox1: TListBox
@@ -28,7 +28,20 @@ object Form1: TForm1
     Height = 304
     Top = 40
     Width = 187
-    ItemHeight = 0
+    Items.Strings = (
+      'freepascal 3.0.4'
+      'lazarus 2.0.6'
+      'initool 0.9.0'
+      'innounp 0.48'
+      'subtitleworkshop 6.0.131121'
+      'subtitleworkshop.install 6.0.131121'
+      'subtitleworkshop.portable 6.0.131121'
+      'SourcePreviewHandler 1.0.15'
+      'renamemytvseries2 2.0.10'
+      'evga-precision-xoc 6.2.7'
+      'InnoSetup 6.0.4'
+    )
+    ItemHeight = 15
     TabOrder = 2
   end
   object Memo1: TMemo
@@ -37,8 +50,26 @@ object Form1: TForm1
     Top = 41
     Width = 416
     Lines.Strings = (
-      'Memo1'
+      'freepascal 3.0.4 [Approved] Downloads cached for licensed users'
+      ' Title: Free Pascal | Published: 2018/02/21'
+      ' Package approved by gep13 on 2 26 2018 14:31:18.'
+      ' Package testing status: Passing on 2 22 2018 02:25:00.'
+      ' Number of Downloads: 1069 | Downloads for this version: 1069'
+      ' Package url'
+      ' Chocolatey Package Source: https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/freepascal'
+      ' Package Checksum: ''zhjVCm+xTZzHVhywC3qAN7u9H4zq9FphDHxALDLid+/G4h5Yv2SyjcgjXEQVtG7fyDTLhi0d5tZ43D//MdZ8/g=='' (SHA512)'
+      ' Tags: freepascal pascal'
+      ' Software Site: http://www.jrsoftware.org/isinfo.php'
+      ' Software License: http://wiki.lazarus.freepascal.org/licensing'
+      ' Software Source: https://www.freepascal.org/down/source/sources.var'
+      ' Documentation: https://www.freepascal.org/docs.var'
+      ' Mailing List: https://www.freepascal.org/maillist.var'
+      ' Issues: https://bugs.freepascal.org/'
+      ' Summary: Free Pascal is a 32, 64 and 16 bit professional Pascal compiler.'
+      ' Description: Free Pascal is a 32, 64 and 16 bit professional Pascal compiler. It can target many processor architectures: Intel x86 (including 8086), AMD64/x86-64, PowerPC, PowerPC64, SPARC, ARM, AArch64, MIPS and the JVM. Supported operating systems include Linux, FreeBSD, Haiku, Mac OS X/iOS/iPhoneSimulator/Darwin, DOS (16 and 32 bit), Win32, Win64, WinCE, OS/2, MorphOS, Nintendo GBA, Nintendo DS, Nintendo Wii, Android, AIX and AROS. Additionally, support for the Motorola 68k architecture is available in the development versions.'
+      ' Release Notes: https://www.freepascal.org/news.var'
     )
+    ScrollBars = ssAutoBoth
     TabOrder = 3
   end
 end
