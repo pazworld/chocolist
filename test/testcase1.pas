@@ -23,7 +23,7 @@ implementation
 
 procedure TTestCase1.TestHookUp;
 begin
-  Fail('Write your own test');
+
 end;
 
 procedure TTestCase1.SetUp;

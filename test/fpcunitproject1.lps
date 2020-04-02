@@ -19,10 +19,15 @@
         <IsPartOfProject Value="True"/>
         <UnitName Value="TestCase1"/>
         <IsVisibleTab Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="35"/>
+        <CursorPos Y="38"/>
         <UsageCount Value="20"/>
-        <Loaded Value="True"/>
       </Unit1>
     </Units>
+    <General>
+      <ActiveWindowIndexAtStart Value="-1"/>
+    </General>
     <JumpHistory HistoryIndex="-1"/>
     <RunParams>
       <FormatVersion Value="2"/>
