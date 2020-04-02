@@ -2,3 +2,6 @@
 *.res
 /backup/
 /lib/
+/test/*.ini
+/test/backup/
+/test/lib/
