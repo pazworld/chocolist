@@ -10,15 +10,15 @@
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="8" Y="4"/>
-        <UsageCount Value="22"/>
+        <UsageCount Value="25"/>
       </Unit0>
       <Unit1>
         <Filename Value="testcase1.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="TestCase1"/>
-        <TopLine Value="9"/>
-        <CursorPos X="23" Y="46"/>
-        <UsageCount Value="22"/>
+        <TopLine Value="17"/>
+        <CursorPos X="31" Y="28"/>
+        <UsageCount Value="25"/>
         <Loaded Value="True"/>
       </Unit1>
       <Unit2>
@@ -27,9 +27,9 @@
         <UnitName Value="Chocolatey"/>
         <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="13"/>
-        <CursorPos X="6" Y="26"/>
-        <UsageCount Value="21"/>
+        <TopLine Value="17"/>
+        <CursorPos X="36" Y="29"/>
+        <UsageCount Value="24"/>
         <Loaded Value="True"/>
       </Unit2>
     </Units>

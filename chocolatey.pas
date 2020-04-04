@@ -4,7 +4,7 @@ unit Chocolatey;
 
 interface
 uses
-  Classes, SysUtils;
+  Classes, Process, SysUtils;
 
 type
 
@@ -21,8 +21,13 @@ implementation
 { TChocolatey }
 
 function TChocolatey.RunChoco: Boolean;
+const
+  CHOCO = 'C:\ProgramData\chocolatey\bin\choco.exe';
+var
+  CmdOutput: String;
 begin
-  RunChoco:= True;
+  RunCommand(CHOCO, [], CmdOutput);
+  RunChoco:= (Pos('Chocolatey', CmdOutput) >= 1);
 end;
 
 end.
