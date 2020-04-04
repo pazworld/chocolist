@@ -33,7 +33,7 @@
         <PackageName Value="FCL"/>
       </Item3>
     </RequiredPackages>
-    <Units Count="2">
+    <Units Count="3">
       <Unit0>
         <Filename Value="fpcunitproject1.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -43,6 +43,11 @@
         <IsPartOfProject Value="True"/>
         <UnitName Value="TestCase1"/>
       </Unit1>
+      <Unit2>
+        <Filename Value="..\chocolatey.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Chocolatey"/>
+      </Unit2>
     </Units>
   </ProjectOptions>
   <CompilerOptions>
@@ -53,6 +58,7 @@
     </Target>
     <SearchPaths>
       <IncludeFiles Value="$(ProjOutDir)"/>
+      <OtherUnitFiles Value=".."/>
       <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
     </SearchPaths>
     <Linking>
@@ -64,7 +70,7 @@
     </Linking>
   </CompilerOptions>
   <Debugging>
-    <Exceptions Count="3">
+    <Exceptions Count="4">
       <Item1>
         <Name Value="EAbort"/>
       </Item1>
@@ -74,6 +80,9 @@
       <Item3>
         <Name Value="EFOpenError"/>
       </Item3>
+      <Item4>
+        <Name Value="EAssertionFailedError"/>
+      </Item4>
     </Exceptions>
   </Debugging>
 </CONFIG>
