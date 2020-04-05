@@ -19,6 +19,7 @@ type
     procedure TearDown; override;
   published
     procedure RunChoco;
+    procedure Search;
     procedure TestHookUp;
   end;
 
@@ -45,6 +46,16 @@ var
 begin
   ChocoIsRun:= FChoco.RunChoco;
   AssertTrue(ChocoIsRun);
+end;
+
+procedure TTestCase1.Search;
+var
+  PackageString: String;
+  IsChocoRun: Boolean;
+begin
+  PackageString:= FChoco.Search('pascal');
+  IsChocoRun:= (Pos('Chocolatey', PackageString) >= 1);
+  Assert(IsChocoRun);
 end;
 
 initialization
