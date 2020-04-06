@@ -21,6 +21,7 @@ type
     procedure RunChoco;
     procedure Search;
     procedure LineBreak;
+    procedure DivideLines;
     procedure TestHookUp;
   end;
 
@@ -67,6 +68,18 @@ begin
   AssertEquals(20, Pos(#13, PackageString));
   AssertEquals(21, Pos(#10, PackageString));
   AssertEquals(20, Pos(#13#10, PackageString));
+end;
+
+procedure TTestCase1.DivideLines;
+var
+  Lines: TStringList;
+begin
+  Lines:= TStringList.Create;
+  FChoco.DivideLines('abc' + #13#10 + 'def' + #13#10, Lines);
+  AssertEquals(2, Lines.Count);
+  FChoco.DivideLines('ghi' + #13#10 + 'jkl' + #13#10 + 'mno' + #13#10, Lines);
+  AssertEquals(3, Lines.Count);
+  Lines.Free;
 end;
 
 initialization
