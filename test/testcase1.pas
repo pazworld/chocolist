@@ -20,6 +20,7 @@ type
   published
     procedure RunChoco;
     procedure Search;
+    procedure LineBreak;
     procedure TestHookUp;
   end;
 
@@ -56,6 +57,16 @@ begin
   PackageString:= FChoco.Search('pascal');
   IsChocoRun:= (Pos('Chocolatey', PackageString) >= 1);
   Assert(IsChocoRun);
+end;
+
+procedure TTestCase1.LineBreak;
+var
+  PackageString: String;
+begin
+  PackageString:= FChoco.Search('pascal');
+  AssertEquals(20, Pos(#13, PackageString));
+  AssertEquals(21, Pos(#10, PackageString));
+  AssertEquals(20, Pos(#13#10, PackageString));
 end;
 
 initialization
