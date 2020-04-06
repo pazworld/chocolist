@@ -5,7 +5,7 @@ unit Unit1;
 interface
 
 uses
-  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls;
+  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, Chocolatey;
 
 type
 
@@ -16,6 +16,7 @@ type
     Edit1: TEdit;
     ListBox1: TListBox;
     Memo1: TMemo;
+    procedure Button1Click(Sender: TObject);
   private
 
   public
@@ -28,6 +29,23 @@ var
 implementation
 
 {$R *.lfm}
+
+{ TForm1 }
+
+procedure TForm1.Button1Click(Sender: TObject);
+var
+  Choco: TChocolatey;
+  S: String;
+  L: TStringList;
+begin
+  Choco:= TChocolatey.Create;
+  S:= Choco.Search(Edit1.Text);
+  L:= TStringList.Create;
+  Choco.DivideLines(S, L);
+  ListBox1.Items.Assign(L);
+  L.Free;
+  Choco.Free;
+end;
 
 end.
 
