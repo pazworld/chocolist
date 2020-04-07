@@ -41,18 +41,18 @@ implementation
 procedure TForm1.Button1Click(Sender: TObject);
 var
   Choco: TChocolatey;
-  SearchStr, S: String;
-  L: TStringList;
+  SearchStr, SearchResult: String;
+  PackageList: TStringList;
 begin
   SearchStr:= Edit1.Text;
   if SearchStr = '' then Exit;
 
   Choco:= TChocolatey.Create;
-  S:= Choco.Search(Edit1.Text);
-  L:= TStringList.Create;
-  Choco.DivideLines(S, L);
-  ListBox1.Items.Assign(L);
-  L.Free;
+  SearchResult:= Choco.Search(Edit1.Text);
+  PackageList:= TStringList.Create;
+  Choco.DivideLines(SearchResult, PackageList);
+  ListBox1.Items.Assign(PackageList);
+  PackageList.Free;
   Choco.Free;
 end;
 
