@@ -67,7 +67,7 @@ end;
 
 procedure TForm1.ListBox1Click(Sender: TObject);
 var
-  ItemIndex: Integer;
+  ItemIndex, P: Integer;
   UnSelected: Boolean;
   SelectedItem, PackageName, PackageInfo: String;
   SpacePos: Integer;
@@ -82,7 +82,8 @@ begin
   PackageName:= Copy(SelectedItem, 1, SpacePos - 1);
   Choco:= TChocolatey.Create;
   PackageInfo:= Choco.PackageInfo(PackageName);
-  Memo1.Text:= PackageInfo;
+  P:= Pos(#13#10, PackageInfo);
+  Memo1.Text:= Copy(PackageInfo, P + 2, Length(PackageInfo));
   Choco.Free;
 end;
 
