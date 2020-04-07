@@ -21,11 +21,13 @@ type
 
 implementation
 
+const
+  CHOCO = 'C:\ProgramData\chocolatey\bin\choco.exe';
+
+
 { TChocolatey }
 
 function TChocolatey.RunChoco: Boolean;
-const
-  CHOCO = 'C:\ProgramData\chocolatey\bin\choco.exe';
 var
   CmdOutput: String;
 begin
@@ -34,8 +36,6 @@ begin
 end;
 
 function TChocolatey.Search(AString: String): String;
-const
-  CHOCO = 'C:\ProgramData\chocolatey\bin\choco.exe';
 begin
   RunCommand(CHOCO, ['list', AString], Result);
 end;
@@ -57,8 +57,6 @@ begin
 end;
 
 function TChocolatey.PackageInfo(AString: String): String;
-const
-  CHOCO = 'C:\ProgramData\chocolatey\bin\choco.exe';
 begin
   RunCommand(CHOCO, ['info', AString], Result);
 end;
