@@ -51,6 +51,7 @@ begin
   SearchResult:= Choco.Search(Edit1.Text);
   PackageList:= TStringList.Create;
   Choco.DivideLines(SearchResult, PackageList);
+  PackageList.Delete(0);
   ListBox1.Items.Assign(PackageList);
   PackageList.Free;
   Choco.Free;
