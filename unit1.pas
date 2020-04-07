@@ -17,6 +17,7 @@ type
     ListBox1: TListBox;
     Memo1: TMemo;
     procedure Button1Click(Sender: TObject);
+    procedure ListBox1Click(Sender: TObject);
   private
 
   public
@@ -44,6 +45,21 @@ begin
   Choco.DivideLines(S, L);
   ListBox1.Items.Assign(L);
   L.Free;
+  Choco.Free;
+end;
+
+procedure TForm1.ListBox1Click(Sender: TObject);
+var
+  S, S2, S3: String;
+  P: Integer;
+  Choco: TChocolatey;
+begin
+  S:= ListBox1.Items[ListBox1.ItemIndex];
+  P:= Pos(' ', S);
+  S2:= Copy(S, 1, P - 1);
+  Choco:= TChocolatey.Create;
+  S3:= Choco.PackageInfo(S2);
+  Memo1.Text:= S3;
   Choco.Free;
 end;
 
