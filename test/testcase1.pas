@@ -47,14 +47,14 @@ end;
 
 procedure TTestCase1.DivideLines;
 var
-  Lines: TStringList;
+  DividedLines: TStringList;
 begin
-  Lines:= TStringList.Create;
-  FChoco.DivideLines('abc' + #13#10 + 'def' + #13#10, Lines);
-  AssertEquals(2, Lines.Count);
-  FChoco.DivideLines('ghi' + #13#10 + 'jkl' + #13#10 + 'mno' + #13#10, Lines);
-  AssertEquals(3, Lines.Count);
-  Lines.Free;
+  DividedLines:= TStringList.Create;
+  FChoco.DivideLines('abc' + #13#10 + 'def' + #13#10, DividedLines);
+  AssertEquals(2, DividedLines.Count);
+  FChoco.DivideLines('ghi' + #13#10 + 'jkl' + #13#10 + 'mno' + #13#10, DividedLines);
+  AssertEquals(3, DividedLines.Count);
+  DividedLines.Free;
 end;
 
 procedure TTestCase1.PackageInfo;
