@@ -41,9 +41,12 @@ implementation
 procedure TForm1.Button1Click(Sender: TObject);
 var
   Choco: TChocolatey;
-  S: String;
+  SearchStr, S: String;
   L: TStringList;
 begin
+  SearchStr:= Edit1.Text;
+  if SearchStr = '' then Exit;
+
   Choco:= TChocolatey.Create;
   S:= Choco.Search(Edit1.Text);
   L:= TStringList.Create;
