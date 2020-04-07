@@ -54,16 +54,22 @@ end;
 
 procedure TForm1.ListBox1Click(Sender: TObject);
 var
-  S, S2, S3: String;
-  P: Integer;
+  ItemIndex: Integer;
+  UnSelected: Boolean;
+  SelectedItem, PackageName, PackageInfo: String;
+  SpacePos: Integer;
   Choco: TChocolatey;
 begin
-  S:= ListBox1.Items[ListBox1.ItemIndex];
-  P:= Pos(' ', S);
-  S2:= Copy(S, 1, P - 1);
+  ItemIndex:= ListBox1.ItemIndex;
+  UnSelected:= (ItemIndex < 0);
+  if UnSelected then Exit;
+
+  SelectedItem:= ListBox1.Items[ItemIndex];
+  SpacePos:= Pos(' ', SelectedItem);
+  PackageName:= Copy(SelectedItem, 1, SpacePos - 1);
   Choco:= TChocolatey.Create;
-  S3:= Choco.PackageInfo(S2);
-  Memo1.Text:= S3;
+  PackageInfo:= Choco.PackageInfo(PackageName);
+  Memo1.Text:= PackageInfo;
   Choco.Free;
 end;
 
