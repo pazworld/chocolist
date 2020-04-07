@@ -22,6 +22,7 @@ type
     procedure Search;
     procedure LineBreak;
     procedure DivideLines;
+    procedure PackageInfo;
     procedure TestHookUp;
   end;
 
@@ -80,6 +81,16 @@ begin
   FChoco.DivideLines('ghi' + #13#10 + 'jkl' + #13#10 + 'mno' + #13#10, Lines);
   AssertEquals(3, Lines.Count);
   Lines.Free;
+end;
+
+procedure TTestCase1.PackageInfo;
+var
+  InfoString: String;
+  P: Integer;
+begin
+  InfoString:= FChoco.PackageInfo('freepascal');
+  P:= Pos('freepascal.org', InfoString);
+  AssertTrue(P >= 1);
 end;
 
 initialization

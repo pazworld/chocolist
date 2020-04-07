@@ -15,6 +15,7 @@ type
     function RunChoco: Boolean;
     function Search(AString: String): String;
     procedure DivideLines(AString: String; AList: TStringList);
+    function PackageInfo(AString: String): String;
   end;
 
 
@@ -53,6 +54,13 @@ begin
     AString:= Copy(AString, CrPos + 2, Length(AString));
     CrPos:= Pos(#13#10, AString);
   end
+end;
+
+function TChocolatey.PackageInfo(AString: String): String;
+const
+  CHOCO = 'C:\ProgramData\chocolatey\bin\choco.exe';
+begin
+  RunCommand(CHOCO, ['info', AString], Result);
 end;
 
 end.
