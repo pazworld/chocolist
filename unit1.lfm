@@ -29,6 +29,7 @@ object Form1: TForm1
       Height = 23
       Top = 8
       Width = 184
+      OnKeyDown = Edit1KeyDown
       TabOrder = 0
       Text = 'pascal'
     end

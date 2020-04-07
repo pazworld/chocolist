@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, ComCtrls,
-  ExtCtrls, Chocolatey;
+  ExtCtrls, Chocolatey, LCLType;
 
 type
 
@@ -21,6 +21,7 @@ type
     Splitter1: TSplitter;
     StatusBar1: TStatusBar;
     procedure Button1Click(Sender: TObject);
+    procedure Edit1KeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure ListBox1Click(Sender: TObject);
   private
 
@@ -50,6 +51,15 @@ begin
   ListBox1.Items.Assign(L);
   L.Free;
   Choco.Free;
+end;
+
+procedure TForm1.Edit1KeyDown(Sender: TObject; var Key: Word; Shift: TShiftState
+  );
+begin
+  if Key = VK_RETURN then
+  begin
+    Button1Click(Sender);
+  end;
 end;
 
 procedure TForm1.ListBox1Click(Sender: TObject);
