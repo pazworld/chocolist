@@ -18,7 +18,6 @@ type
     ListBox1: TListBox;
     Memo1: TMemo;
     Panel1: TPanel;
-    Panel2: TPanel;
     Splitter1: TSplitter;
     StatusBar1: TStatusBar;
     procedure Button1Click(Sender: TObject);
