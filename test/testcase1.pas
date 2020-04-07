@@ -19,7 +19,6 @@ type
     procedure TearDown; override;
   published
     procedure Search;
-    procedure LineBreak;
     procedure DivideLines;
     procedure PackageInfo;
   end;
@@ -44,16 +43,6 @@ begin
   PackageString:= FChoco.Search('pascal');
   IsChocoRun:= (Pos('Chocolatey', PackageString) >= 1);
   Assert(IsChocoRun);
-end;
-
-procedure TTestCase1.LineBreak;
-var
-  PackageString: String;
-begin
-  PackageString:= FChoco.Search('pascal');
-  AssertEquals(20, Pos(#13, PackageString));
-  AssertEquals(21, Pos(#10, PackageString));
-  AssertEquals(20, Pos(#13#10, PackageString));
 end;
 
 procedure TTestCase1.DivideLines;
