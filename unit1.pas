@@ -5,7 +5,8 @@ unit Unit1;
 interface
 
 uses
-  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, Chocolatey;
+  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, ComCtrls,
+  ExtCtrls, Chocolatey;
 
 type
 
@@ -16,6 +17,10 @@ type
     Edit1: TEdit;
     ListBox1: TListBox;
     Memo1: TMemo;
+    Panel1: TPanel;
+    Panel2: TPanel;
+    Splitter1: TSplitter;
+    StatusBar1: TStatusBar;
     procedure Button1Click(Sender: TObject);
     procedure ListBox1Click(Sender: TObject);
   private
