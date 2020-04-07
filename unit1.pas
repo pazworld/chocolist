@@ -69,7 +69,7 @@ end;
 procedure TForm1.ListBox1Click(Sender: TObject);
 var
   ItemIndex, P: Integer;
-  UnSelected: Boolean;
+  UnSelected, IsPackageNumberSelected: Boolean;
   SelectedItem, PackageName, PackageInfo: String;
   SpacePos: Integer;
   Choco: TChocolatey;
@@ -77,6 +77,8 @@ begin
   ItemIndex:= ListBox1.ItemIndex;
   UnSelected:= (ItemIndex < 0);
   if UnSelected then Exit;
+  IsPackageNumberSelected:= (ItemIndex = (ListBox1.Items.Count - 1));
+  if IsPackageNumberSelected then Exit;
 
   SelectedItem:= ListBox1.Items[ItemIndex];
   SpacePos:= Pos(' ', SelectedItem);
