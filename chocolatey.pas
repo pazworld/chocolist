@@ -12,7 +12,6 @@ type
 
   TChocolatey = class
   public
-    function RunChoco: Boolean;
     function Search(AString: String): String;
     procedure DivideLines(AString: String; AList: TStringList);
     function PackageInfo(AString: String): String;
@@ -26,14 +25,6 @@ const
 
 
 { TChocolatey }
-
-function TChocolatey.RunChoco: Boolean;
-var
-  CmdOutput: String;
-begin
-  RunCommand(CHOCO, [], CmdOutput);
-  RunChoco:= (Pos('Chocolatey', CmdOutput) >= 1);
-end;
 
 function TChocolatey.Search(AString: String): String;
 begin

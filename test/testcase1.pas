@@ -18,7 +18,6 @@ type
     procedure SetUp; override;
     procedure TearDown; override;
   published
-    procedure RunChoco;
     procedure Search;
     procedure LineBreak;
     procedure DivideLines;
@@ -41,14 +40,6 @@ end;
 procedure TTestCase1.TearDown;
 begin
   FChoco.Free;
-end;
-
-procedure TTestCase1.RunChoco;
-var
-  ChocoIsRun: Boolean;
-begin
-  ChocoIsRun:= FChoco.RunChoco;
-  AssertTrue(ChocoIsRun);
 end;
 
 procedure TTestCase1.Search;
