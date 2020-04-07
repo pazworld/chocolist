@@ -22,15 +22,9 @@ type
     procedure LineBreak;
     procedure DivideLines;
     procedure PackageInfo;
-    procedure TestHookUp;
   end;
 
 implementation
-
-procedure TTestCase1.TestHookUp;
-begin
-
-end;
 
 procedure TTestCase1.SetUp;
 begin
