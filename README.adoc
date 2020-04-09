@@ -1,0 +1,16 @@
+= chocolist
+
+chocolist is a front end of Chocolatey
+
+image::chocolist.png[]
+
+Features:
+
+* search packages
+* show package information
+
+== Note
+
+When you search or get information of a package, you may see blank command window.
+
+image::chocolist_commandwindow.png[]
