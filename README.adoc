@@ -2,7 +2,7 @@
 
 chocolist is a front end of Chocolatey
 
-image::chocolist.png[]
+image::images/chocolist.png[]
 
 Features:
 
@@ -13,4 +13,4 @@ Features:
 
 When you search or get information of a package, you may see blank command window.
 
-image::chocolist_commandwindow.png[]
+image::images/chocolist_commandwindow.png[]
